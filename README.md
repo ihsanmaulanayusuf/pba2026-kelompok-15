@@ -6,9 +6,9 @@ This project compares Machine Learning (PyCaret AutoML) and Deep Learning approa
 ## 👥 Team Members
 | Name | NIM | GitHub |
 |------|-----|--------|
-| Nama 1 | NIM | @username |
-| Nama 2 | NIM | @username |
-| Nama 3 | NIM | @username |
+| Ridho Benedictus Togi Manik | 123450060 | @username |
+| Muhammad Aqil Ramadhan | 123450066 | @MuhammadAqil1 |
+| Ihsan Maulana Yusuf | 123450110 | @ihsanmaulanayusuf |
 
 ## 📊 Dataset
 Dataset: Indonesian Political YouTube Comments  
