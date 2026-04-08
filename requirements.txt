@@ -1,7 +1,6 @@
 # Runtime dependencies for Hugging Face Space (ML inference only)
-pandas==2.2.3
+pandas==2.1.4
 numpy==1.26.4
 scikit-learn==1.4.2
 pycaret==3.3.2
-joblib==1.4.2
-
+joblib==1.3.2
