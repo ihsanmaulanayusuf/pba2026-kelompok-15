@@ -19,6 +19,4 @@ Task: Sentiment Classification (Positive, Negative, Neutral)
 - Deep Learning: PyTorch (LSTM / IndoBERT)
 
 ## 🔗 Links
-- ML Model (HF): -
-- DL Model (HF): -
-- Paper (arXiv): -
+https://huggingface.co/spaces/sannnnn31/sentiment-ml-pycaret
