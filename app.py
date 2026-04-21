@@ -10,8 +10,19 @@ def predict_sentiment(text):
     text_processed = text.lower() # Sederhanakan (idealnya sama persis dengan tahap pre-processing di ipynb)
     
     # 1. Aturan Deteksi Cepat Berdasarkan Keyword Baru (Lexicon-based override)
-    negative_words = ["nyawit", "mbgnya mana wok", "wowok jelek", "jelek", "buruk", "parah", "kecewa", "hancur", "gagal", "tolol", "bodoh", "gila", "korup"]
-    positive_words = ["keren", "hebat", "bagus", "mantap", "terbaik", "luar biasa", "salut", "top", "good", "oke", "mantul"]
+    negative_words = [
+        "nyawit", "mbgnya mana wok", "wowok jelek", "jelek", "buruk", "parah", "kecewa", "hancur", 
+        "gagal", "tolol", "bodoh", "gila", "korup", "ngawur", "hoaks", "pembohong", "dungu", 
+        "sombong", "bocil", "buzzer", "cebong", "kampret", "kadrun", "penipu", "sampah", "najis", 
+        "munafik", "pecundang", "cacat", "goblok", "bego", "tolak", "anti", "makar", "pengkhianat", 
+        "berengsek", "brengsek", "fufufafa", "curang", "licik", "nepotisme", "dinasti", "kkn"
+    ]
+    positive_words = [
+        "keren", "hebat", "bagus", "mantap", "terbaik", "luar biasa", "salut", "top", "good", 
+        "oke", "mantul", "cerdas", "pintar", "bijak", "maju", "sukses", "bangga", "wibawa", 
+        "merakyat", "jujur", "amanah", "gas", "dukung", "setuju", "lanjutkan", "menyala", 
+        "gacor", "cinta", "sayang", "harapan", "pro"
+    ]
     
     for word in negative_words:
         if word in text_processed:
