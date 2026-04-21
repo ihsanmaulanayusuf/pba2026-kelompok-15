@@ -24,6 +24,11 @@ def predict_sentiment_ml(text):
         "gacor", "cinta", "sayang", "harapan", "pro"
     ]
     
+    neutral_words = [
+        "prabowo", "probowo", "jokowi", "anies", "ganjar", "gibran", "mahfud", "cak imin", "amin", 
+        "01", "02", "03", "pemerintah", "presiden", "menteri", "partai", "pemilu", "debat", "kpu", "bawaslu"
+    ]
+    
     for word in negative_words:
         if word in text_processed:
             return "Negatif"
@@ -31,6 +36,12 @@ def predict_sentiment_ml(text):
     for word in positive_words:
         if word in text_processed:
             return "Positif"
+
+    # Cegah bias ML: Jika input sangat pendek (misal hanya menyebut nama tokoh) tanpa kata sifat negatif/positif, paksa Netral.
+    if len(text_processed.split()) <= 3:
+        for word in neutral_words:
+            if word in text_processed:
+                return "Netral"
 
     # 2. Lakukan pre-processing dasar agar sesuai dengan input model
     text_length = len(text_processed)
