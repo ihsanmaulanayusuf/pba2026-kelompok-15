@@ -31,8 +31,9 @@ model_path = "model_dl/lstm_model.pt"
 if not (os.path.exists(vocab_path) and os.path.exists(model_path)):
     print("Model belum ada. Melakukan training otomatis...")
     import subprocess
+    import sys
     # Run training
-    subprocess.run(["python", "src/train_dl.py"], check=True)
+    subprocess.run([sys.executable, "src/train_dl.py"], check=True)
 
 if os.path.exists(vocab_path) and os.path.exists(model_path):
     with open(vocab_path, 'rb') as f:

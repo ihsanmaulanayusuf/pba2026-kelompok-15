@@ -9,7 +9,12 @@ import os
 
 # 1. Load Data
 print("Loading data...")
-df = pd.read_csv('../data/data_preprocessed.csv')
+# Supaya bisa dipanggil dari root project (via app_dl.py) maupun dari src/
+data_path = 'data/data_preprocessed.csv'
+if not os.path.exists(data_path):
+    data_path = '../data/data_preprocessed.csv'
+    
+df = pd.read_csv(data_path)
 
 # Drop NA
 df = df.dropna(subset=['text_processed', 'sentiment', 'label'])
@@ -42,8 +47,15 @@ for text in texts:
 
 print(f"Vocab size: {len(vocab)}")
 
-os.makedirs('../model_dl', exist_ok=True)
-with open('../model_dl/vocab.pkl', 'wb') as f:
+vocab_path = 'model_dl/vocab.pkl'
+if not os.path.exists('model_dl'):
+    try:
+        os.makedirs('model_dl', exist_ok=True)
+    except:
+        vocab_path = '../model_dl/vocab.pkl'
+        os.makedirs('../model_dl', exist_ok=True)
+
+with open(vocab_path, 'wb') as f:
     pickle.dump(vocab, f)
 
 # 3. Create Dataset
@@ -120,6 +132,8 @@ for epoch in range(epochs):
     print(f"Epoch {epoch+1}/{epochs} | Loss: {total_loss/len(dataloader):.4f} | Acc: {100 * correct / total:.2f}%")
 
 # 6. Save Model
-model_path = '../model_dl/lstm_model.pt'
-torch.save(model.state_dict(), model_path)
-print(f"Model saved to {model_path}")
+model_path_out = 'model_dl/lstm_model.pt'
+if not os.path.exists('model_dl'):
+    model_path_out = '../model_dl/lstm_model.pt'
+torch.save(model.state_dict(), model_path_out)
+print(f"Model saved to {model_path_out}")
