@@ -30,4 +30,4 @@ Task: Sentiment Classification (Positive, Negative, Neutral)
 
 ## 🔗 Links (Deployments)
 - **Machine Learning (PyCaret)**: [https://huggingface.co/spaces/sannnnn31/sentiment-ml-pycaret](https://huggingface.co/spaces/sannnnn31/sentiment-ml-pycaret)
-- **Deep Learning (PyTorch LSTM)**: [https://huggingface.co/spaces/sannnnn31/sentiment-dl-pytorch](https://huggingface.co/spaces/sannnnn31/sentiment-dl-pytorch) *(Siap untuk di-deploy dari repositori ini)*
+- **Deep Learning (PyTorch LSTM)**: [https://huggingface.co/spaces/sannnnn31/sentiment-ml-pytorch](https://huggingface.co/spaces/sannnnn31/sentiment-ml-pytorch)
