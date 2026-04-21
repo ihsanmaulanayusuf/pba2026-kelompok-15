@@ -61,7 +61,10 @@ iface = gr.Interface(
     inputs=gr.Textbox(lines=3, placeholder="Masukkan komentar di sini..."),
     outputs=gr.Text(label="Hasil Prediksi Sentimen"),
     title="Analisis Sentimen Politik di X (Twitter)",
-    description="sentimen tentang politik di indonesia dari kolom komentar di x"
+    description="""Aplikasi ini memproses *dataset tweet* dari X (Twitter) terkait panggung perpolitikan Indonesia untuk diklasifikasikan ke dalam sentimen Positif, Netral, maupun Negatif.
+
+🤖 **Tentang Model (Machine Learning):**
+Versi ini menggunakan kerangka **PyCaret AutoML** yang menyeleksi dan melatih algoritme ML konvensional terbaik secara otomatis. Selain pemodelan statistik, kami juga menyematkan aturan baca (*Lexicon / Keyword filter*) untuk mendeteksi *slang* media sosial dengan presisi tinggi."""
 )
 
 if __name__ == "__main__":
