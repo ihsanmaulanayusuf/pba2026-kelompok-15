@@ -1,3 +1,13 @@
+---
+title: Sentiment ML Pycaret
+emoji: 📊
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+app_file: app.py
+pinned: false
+python_version: 3.10.13
+---
 # Sentiment Analysis on Indonesian Political YouTube Comments
 
 ## 📌 Description
