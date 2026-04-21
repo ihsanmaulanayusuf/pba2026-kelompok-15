@@ -105,10 +105,10 @@ iface = gr.Interface(
     inputs=gr.Textbox(lines=3, placeholder="Masukkan komentar di sini..."),
     outputs=gr.Text(label="Hasil Prediksi Sentimen (Deep Learning PyTorch)"),
     title="Analisis Sentimen Politik di X (Twitter) - Versi Deep Learning",
-    description="""Aplikasi ini memproses *dataset tweet* dari X (Twitter) terkait panggung perpolitikan Indonesia untuk diklasifikasikan ke dalam sentimen Positif, Netral, maupun Negatif.
+    description="""Aplikasi ini memproses dataset tweet dari X (Twitter) terkait panggung perpolitikan Indonesia untuk diklasifikasikan ke dalam sentimen Positif, Netral, maupun Negatif.
 
-🧠 **Tentang Model (Deep Learning):**
-Berbeda dengan versi standar, versi ini sangat mutakhir karena digerakkan oleh algoritma **Deep Learning**. Kami mengimplementasikan arsitektur **LSTM (Long Short-Term Memory)** via **PyTorch** yang memiliki daya ingat tinggi terhadap posisi kata penentu pada kalimat panjang, dibantu filter leksikon (*Lexicon*) terpadu."""
+Tentang Model (Deep Learning):
+Berbeda dengan versi standar, versi ini sangat mutakhir karena digerakkan oleh algoritma Deep Learning. Kami mengimplementasikan arsitektur LSTM (Long Short-Term Memory) via PyTorch yang memiliki daya ingat tinggi terhadap posisi kata penentu pada kalimat panjang, dibantu filter leksikon (Lexicon) terpadu."""
 )
 
 if __name__ == "__main__":
